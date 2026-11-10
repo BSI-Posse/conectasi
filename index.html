@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#102b46">
+  <meta name="description" content="Acesse os questionários do projeto Conecta SI, do IF Goiano – Campus Posse.">
+  <title>Conecta SI | Questionários</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #102b46;
+      --blue: #176b87;
+      --mint: #c9e8dc;
+      --ink: #183247;
+      --muted: #667987;
+      --paper: #f5f8f7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(ellipse at 12% 12%, rgba(201,232,220,.72), transparent 34rem),
+        radial-gradient(ellipse at 90% 88%, rgba(190,220,232,.58), transparent 32rem),
+        var(--paper);
+      display: grid;
+      place-items: center;
+      padding: 32px 20px;
+    }
+    main { width: min(100%, 760px); }
+    .panel {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(30px, 7vw, 62px);
+      border: 1px solid rgba(16,43,70,.08);
+      border-radius: 28px;
+      background: rgba(255,255,255,.88);
+      box-shadow: 0 24px 70px rgba(16,43,70,.09);
+      text-align: center;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 25px;
+      color: var(--blue);
+      font-size: .76rem;
+      font-weight: 750;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before, .eyebrow::after {
+      content: "";
+      width: 22px;
+      height: 1px;
+      background: #8db8b2;
+    }
+    h1 {
+      margin: 0;
+      color: var(--navy);
+      font-size: clamp(2.7rem, 8vw, 4.6rem);
+      line-height: .98;
+      letter-spacing: -.065em;
+      font-weight: 800;
+    }
+    h1 span { color: var(--blue); }
+    .intro {
+      max-width: 470px;
+      margin: 22px auto 36px;
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.7;
+    }
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      text-align: left;
+    }
+    .action {
+      min-height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px;
+      border: 1px solid #dce7e6;
+      border-radius: 18px;
+      background: #fff;
+      color: var(--navy);
+      text-decoration: none;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .action:hover {
+      transform: translateY(-4px);
+      border-color: #9fc8c0;
+      box-shadow: 0 14px 30px rgba(16,43,70,.09);
+    }
+    .action:focus-visible {
+      outline: 3px solid #4a9a9a;
+      outline-offset: 4px;
+    }
+    .number {
+      color: #7c9b9d;
+      font-size: .75rem;
+      font-weight: 750;
+      letter-spacing: .12em;
+    }
+    .action strong {
+      display: block;
+      max-width: 230px;
+      margin-top: 18px;
+      font-size: 1.08rem;
+      line-height: 1.35;
+    }
+    .arrow {
+      align-self: flex-end;
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border-radius: 50%;
+      background: #eaf3f0;
+      color: var(--blue);
+      font-size: 1.15rem;
+    }
+    footer {
+      margin-top: 30px;
+      color: #82919a;
+      font-size: .78rem;
+      line-height: 1.6;
+    }
+    footer strong { color: #526977; font-weight: 650; }
+    @media (max-width: 560px) {
+      body { padding: 18px 14px; }
+      .panel { border-radius: 22px; padding: 34px 22px; }
+      .intro { margin: 18px auto 28px; font-size: .94rem; }
+      .actions { grid-template-columns: 1fr; gap: 11px; }
+      .action { min-height: 126px; padding: 18px; }
+      .action strong { max-width: none; margin-top: 12px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="panel" aria-labelledby="title">
+      <div class="eyebrow">Projeto de extensão</div>
+      <h1 id="title">Conecta <span>SI</span></h1>
+      <p class="intro">
+        Sua participação é importante. Escolha um dos questionários abaixo
+        e contribua com o diagnóstico do projeto.
+      </p>
+
+      <nav class="actions" aria-label="Questionários do Conecta SI">
+        <a class="action"
+           href="https://docs.google.com/forms/d/e/1FAIpQLSc3FQQ_zKGSv_pRUT6hBoyy4tCp4ylK1gepPs0goEGY6an9ww/viewform"
+           target="_blank" rel="noopener noreferrer">
+          <div>
+            <span class="number">01 / COMUNIDADE</span>
+            <strong>Diagnóstico do Conhecimento da Comunidade</strong>
+          </div>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+
+        <a class="action"
+           href="https://docs.google.com/forms/d/e/1FAIpQLScp6gYeQmCCNpQeLQdFp-r7OkfQdxSzEH7UC9g3fSgPyPedKg/viewform"
+           target="_blank" rel="noopener noreferrer">
+          <div>
+            <span class="number">02 / INSTITUCIONAL</span>
+            <strong>Diagnóstico Tecnológico</strong>
+          </div>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </nav>
+
+      <footer>
+        <strong>IF Goiano – Campus Posse</strong><br>
+        Bacharelado em Sistemas de Informação
+      </footer>
+    </section>
+  </main>
+</body>
+</html>
